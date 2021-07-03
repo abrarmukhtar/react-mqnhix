@@ -48,9 +48,11 @@ const Contacts = () => {
                   </a>
 
                   <br />
+                  {currentId ===''?
                   <a href="#" onClick={() => dispatch(deleteRecord(elm.id))}>
                     Delete
-                  </a>
+                  </a>:''
+                  }
                 </td>
               </tr>
             </tbody>

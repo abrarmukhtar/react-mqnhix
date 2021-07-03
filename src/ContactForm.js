@@ -31,6 +31,7 @@ const ContactForm = props => {
 
   const submitEvent = e => {
     e.preventDefault();
+
     dispatch(addRecord(inputData));
     setInputData(initState);
 
@@ -52,9 +53,10 @@ const ContactForm = props => {
 
     dispatch(updateRecord(updated));
     props.edit.setCurrentId('');
+    setInputData(initState);
     // if (confirm('Do you want to update')) {
     //   props.addorEdit(inputData);
-    //   document.getElementById('fname').focus();
+    document.getElementById('fname').focus();
     // } else {
     // }
   };
@@ -77,6 +79,7 @@ const ContactForm = props => {
           id="fname"
           onChange={inputEvent}
           value={inputData.fname}
+          required
         />
       </div>
       <div className="col-md-6">
@@ -88,6 +91,7 @@ const ContactForm = props => {
           id="lname"
           onChange={inputEvent}
           value={inputData.lname}
+          required
         />
       </div>
       <div className="col-md-6">
@@ -99,6 +103,7 @@ const ContactForm = props => {
           id="fatherName"
           onChange={inputEvent}
           value={inputData.fatherName}
+          required
         />
       </div>
 
