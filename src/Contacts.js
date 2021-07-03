@@ -11,7 +11,12 @@ const Contacts = () => {
 
   const dispatch = useDispatch();
 
-  const addorEdit = obj => {};
+ 
+  const addnew =()=>{
+   firebasedb.child('information').puch(
+
+   )
+  }
 
   return (
     <>
