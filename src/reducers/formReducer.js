@@ -24,8 +24,8 @@ const formReducer = (state = initState, action) => {
       const indexs = state.newData.findIndex(
         elm => elm.id === action.payload.id
       );
-      console.log(indexs);
-      return { ...state, ...state.newData };
+      state.newData[indexs] = action.payload;
+      return { ...state, newData: [...state.newData] };
     default:
       return state;
   }

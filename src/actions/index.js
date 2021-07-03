@@ -18,9 +18,9 @@ export const deleteRecord = id => {
   };
 };
 
-export const updateRecord = (data, index) => {
+export const updateRecord = data => {
   return {
     type: 'update',
-    payload: { data: data, index: index }
+    payload: data
   };
 };
