@@ -33,6 +33,7 @@ const ContactForm = props => {
     e.preventDefault();
     dispatch(addRecord(inputData));
     setInputData(initState);
+
     // if (inputData.lname == '' || inputData.fname == '') {
     // } else {
     //   props.addorEdit(inputData);
@@ -50,6 +51,7 @@ const ContactForm = props => {
     };
 
     dispatch(updateRecord(updated));
+    props.edit.setCurrentId('');
     // if (confirm('Do you want to update')) {
     //   props.addorEdit(inputData);
     //   document.getElementById('fname').focus();

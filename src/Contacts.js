@@ -46,7 +46,7 @@ const Contacts = () => {
 
                   <br />
                   <a href="#" onClick={() => dispatch(deleteRecord(elm.id))}>
-                    Delete {elm.id}
+                    Delete
                   </a>
                 </td>
               </tr>
