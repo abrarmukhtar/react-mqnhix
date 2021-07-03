@@ -71,7 +71,7 @@ const ContactForm = props => {
       autoComplete="off"
     >
       <div className="col-md-6">
-        <label className="form-label">First Name</label>
+        <label className="form-label">First Name *</label>
         <input
           type="text"
           name="fname"
@@ -83,7 +83,7 @@ const ContactForm = props => {
         />
       </div>
       <div className="col-md-6">
-        <label className="form-label">Last Name</label>
+        <label className="form-label">Last Name *</label>
         <input
           type="text"
           name="lname"
@@ -95,7 +95,7 @@ const ContactForm = props => {
         />
       </div>
       <div className="col-md-6">
-        <label className="form-label">Father Name</label>
+        <label className="form-label">Father Name *</label>
         <input
           type="text"
           name="fatherName"

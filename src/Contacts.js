@@ -25,7 +25,7 @@ const Contacts = () => {
           <tr>
             <th scope="col">First</th>
             <th scope="col">Last</th>
-            <th scope="col">FatherName</th>
+            <th scope="col">Father Name</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
