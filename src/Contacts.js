@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ContactForm from './ContactForm';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteRecord } from './actions/index';
-import firebasedb from './fire';
+
 
 const Contacts = () => {
   const [currentId, setCurrentId] = useState('');
@@ -13,9 +13,7 @@ const Contacts = () => {
 
  
   const addnew =()=>{
-   firebasedb.child('information').puch(
-
-   )
+   
   }
 
   return (
