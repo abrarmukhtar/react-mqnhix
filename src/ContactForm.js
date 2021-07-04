@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { initState, addRecord, updateRecord } from './actions/index';
+import firebase from './fire';
 const ContactForm = props => {
   // const initData = {
   //   fname: '',
@@ -33,6 +34,10 @@ const ContactForm = props => {
     e.preventDefault();
 
     dispatch(addRecord(inputData));
+    firebase
+      .database()
+      .ref('information')
+      .push(inputData);
     setInputData(initState);
 
     // if (inputData.lname == '' || inputData.fname == '') {
@@ -52,6 +57,7 @@ const ContactForm = props => {
     };
 
     dispatch(updateRecord(updated));
+
     props.edit.setCurrentId('');
     setInputData(initState);
     // if (confirm('Do you want to update')) {
